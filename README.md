@@ -19,7 +19,7 @@ This repository contains a novel algorithm for detecting crosswalk traffic light
 
 The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually impaired individuals in detecting crosswalk traffic lights while addressing challenges such as multi-light interference and small target detection. The model is based on the YOLOv5 architecture and incorporates advanced attention mechanisms to improve detection accuracy.
 
-[Full paper link](https://github.com/你的仓库路径/文件路径)
+[Full paper link](https://github.com/TmFnaXNh/crosswalk-traffic-light-detection/blob/main/A%20Novel%20Crosswalk%20Traffic%20Light%20Detection%20Algorithm%20Resolving%20Multi-Light%20Interference%20for%20the%20Visually%20Impaired_v16.pdf)
 
 ### Key Features
 
