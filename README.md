@@ -10,7 +10,6 @@ This repository contains a novel algorithm for detecting crosswalk traffic light
 - [Installation](#installation)
 - [Dataset Setup](#dataset-setup)
 - [How to Run](#how-to-run)
-- [Arguments](#arguments)
 - [References](#references)
 
 ---
@@ -28,12 +27,15 @@ The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually 
    - Efficiently detects small objects like crosswalk traffic lights in real-time.
 
 2. **Squeeze-and-Excitation (SE) Module**:
-   - Added after the SPPF block of YOLOv5.
+   - Added after the SPPF block of YOLOv5 model for detecting traffic lights.
    - Enhances the detection of small targets by reweighting feature channels based on their importance.
+   <img src="https://cdn.luogu.com.cn/upload/image_hosting/swj2z6ot.png" alt="Crosswalk Detection" width="300" />
+
 
 3. **Convolutional Block Attention Module (CBAM)**:
-   - Integrated before each C3 block in the neck and after the SPPF block in the backbone.
+   - Integrated before each C3 block in the neck and after the SPPF block in the backbone of YOLOv5 model for crosswalk detection.
    - Uses both channel and spatial attention to improve crosswalk detection accuracy and resolve multi-light interference.
+   <img src="https://cdn.luogu.com.cn/upload/image_hosting/swj2z6ot.png" alt="Crosswalk Detection" width="300"  />
 
 4. **Crosswalk-Associated Detection**:
    - Detects crosswalk locations and uses this information to select the corresponding crosswalk traffic light.
@@ -47,6 +49,18 @@ The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually 
 6. **Color Detection via CNN**:
    - Custom CNN designed to classify the color of the detected crosswalk traffic light (red or green).
    - Ensures accurate identification of whether the pedestrian can cross the street.
+   <img src="https://cdn.luogu.com.cn/upload/image_hosting/58co05e1.png" alt="Crosswalk Detection" width="300" />
+
+### Model Performance
+| Model                          | Precision     | Recall         | mAP@0.5     | mAP@0.5:0.95  |
+|--------------------------------|---------------|----------------|-------------|---------------|
+| Traffic Light YOLOv5s(SE)      | 0.951         | 0.932          | 0.968       | 0.587         |
+| Crosswalk YOLOv5s(CBAM)        | 1.000         | 0.975          | 0.975       | 0.779         |
+
+| Model             | Correct | Not Detected | Incorrect | Precision | Recall  | Accuracy |
+|-------------------|---------|--------------|-----------|-----------|---------|----------|
+| **Our Algorithm**  | 585     | 5            | 10        | 98.3%     | 99.2%   | 97.5%    |
+| **YOLOv5 + Pixel** | 552     | 5            | 43        | 92.8%     | 99.1%   | 92.0%    |
 
 ## Getting Started
 
