@@ -84,8 +84,8 @@ You will need to have the following tools installed on your system:
 2. **Create a new Conda environment**:
 
    ```bash
-   conda create --name crosswalk_detection python=3.8
-   conda activate crosswalk_detection
+   conda create --name detection python=3.8
+   conda activate detection
    ```
 
 3. **Install project dependencies**:
