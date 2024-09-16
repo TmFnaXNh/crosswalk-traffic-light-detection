@@ -123,3 +123,25 @@ python main.py --crosswalk_weights path_to_crosswalk_yolov5_weights \
                --label_dir path_to_label_directory \
                --cnn_weights path_to_cnn_weights
 ```
+
+- `--crosswalk_weights`: Path to the YOLOv5 weights for crosswalk detection.
+- `--signal_weights`: Path to the YOLOv5 weights for traffic signal detection.
+- `--image_dir`: Directory containing the images to be processed for detection.
+- `--label_dir`: Directory of the labels (in `.txt` format, containing 0/1 labels) to check the detection validity.
+- `--cnn_weights`: Path to the CNN model weights used for additional classifications.
+
+## References
+
+1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2017). ImageNet classification with deep convolutional neural networks. *Communications of the ACM*, 60(6), 84-90.
+2. Girshick, R., Donahue, J., Darrell, T., & Malik, J. (2015). Region-based convolutional networks for accurate object detection and segmentation. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 38(1), 142-158.
+3. Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You only look once: Unified, real-time object detection. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*.
+4. Lin, T.-Y., Goyal, P., et al. (2020). Focal loss for dense object detection. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 42(2), 318-327.
+5. Jocher, G. (2020). YOLOv5. Available: [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+6. Swami, P. S., & Futane, P. (2018). Traffic light detection system for low vision or visually impaired person through voice. *Fourth International Conference on Computing Communication Control and Automation (ICCUBEA)*, Pune, India.
+7. Eto, S., Wada, Y., & Wada, C. (2023). Convolutional neural network based zebra crossing and pedestrian traffic light recognition. *Journal of Mechanical and Electrical Intelligent System*, 6(3), 1-11.
+8. Rao, V., & Nguyen, H. (2024). A computer vision based system to make street crossings safer for the visually impaired. *Journal of High School Science*, 8(2), 253-266.
+9. Hu, J., Shen, L., & Sun, G. (2018). Squeeze-and-excitation networks. *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)*.
+10. Woo, S., Park, J., Lee, J.-Y., & Kweon, I. S. (2018). CBAM: Convolutional block attention module. *Proceedings of the European Conference on Computer Vision (ECCV)*.
+11. Nair, V., & Hinton, G. E. (2010). Rectified linear units improve restricted boltzmann machines. *Proceedings of the 27th International Conference on Machine Learning (ICML-10)*.
+12. [Makesense.ai](https://www.makesense.ai/)
+
