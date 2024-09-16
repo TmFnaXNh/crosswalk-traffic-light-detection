@@ -1,5 +1,4 @@
 import torch
-import yaml
 import argparse
 import os
 import torch.nn as nn
