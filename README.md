@@ -42,6 +42,7 @@ The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually 
 5. **Custom Dataset**:
    - Dataset captured from a pedestrian's viewpoint, featuring crosswalk and traffic light images under various conditions.
    - Images were labeled for both traffic light and crosswalk detection tasks.
+   - Some of the data used in this project were sourced from the publicly available dataset at [ImVisible](https://github.com/samuelyu2002/ImVisible), while the rest of the data consists of images that we captured ourselves specifically for the purpose of crosswalk and traffic light detection.
 
 6. **Color Detection via CNN**:
    - Custom CNN designed to classify the color of the detected crosswalk traffic light (red or green).
