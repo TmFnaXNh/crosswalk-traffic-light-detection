@@ -1,8 +1,3 @@
-"""
-copy code in "./yolov5-master/models/common.py" to your "Users/username/.cache/torch/hub/ultralytics_yolov5_master/models/common.py" to run this code.
-download our dataset from "https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX?usp=drive_link" and put the downloaded data folder in the same directory.
-"""
-
 import torch
 import yaml
 import argparse
