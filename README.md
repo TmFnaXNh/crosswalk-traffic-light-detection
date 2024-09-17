@@ -68,7 +68,7 @@ To use this project, follow these instructions.
 
 You will need to have the following tools installed on your system:
 
-- Python 3.7+
+- Python 3.8+
 - [Git](https://git-scm.com/)
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 
