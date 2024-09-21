@@ -29,11 +29,10 @@ The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually 
    - Enhances the detection of small targets by reweighting feature channels based on their importance.
    <img src="https://cdn.luogu.com.cn/upload/image_hosting/swj2z6ot.png" alt="Crosswalk Detection" width="300" />
 
-
 3. **Convolutional Block Attention Module (CBAM)**:
    - Integrated before each C3 block in the neck and after the SPPF block in the backbone of YOLOv5 model for crosswalk detection.
    - Uses both channel and spatial attention to improve crosswalk detection accuracy and resolve multi-light interference.
-   <img src="https://cdn.luogu.com.cn/upload/image_hosting/yu3pjihf.png" alt="Crosswalk Detection" width="300"  />
+   <img src="https://cdn.luogu.com.cn/upload/image_hosting/d6ppgxb0.png" alt="Crosswalk Detection" width="300"  />
 
 4. **Crosswalk-Associated Detection**:
    - Detects crosswalk locations and uses this information to select the corresponding crosswalk traffic light.
