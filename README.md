@@ -114,7 +114,7 @@ You will need to have the following tools installed on your system:
    Example:
 
     ```bash
-   mv /path_to_downloaded_data/crosswalk_data ./data
+   mv /path_to_downloaded_data/* ./data
     ```
 
 ### Dataset Setup
