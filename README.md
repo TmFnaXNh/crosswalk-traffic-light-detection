@@ -92,8 +92,13 @@ You will need to have the following tools installed on your system:
    ```bash
    pip install -r requirements.txt
    ```
-   
-4. **Move the custom model files**:
+4. **Clone YOLOv5 repository**:
+   Clone the YOLOv5 repository and move it to the correct `.cache` directory:
+   ```bash
+   git clone https://github.com/ultralytics/yolov5.git
+   mv yolov5/* ~/.cache/torch/hub/ultralytics_yolov5_master
+   ```
+5. **Move the custom model files**:
    Copy the `common.py` and `yolo.py` files from this repository to the YOLOv5 folder in the `.cache` directory:
 
    ```bash
@@ -101,7 +106,7 @@ You will need to have the following tools installed on your system:
    cp ./yolo.py ~/.cache/torch/hub/ultralytics_yolov5_master/yolo.py
    ```
 
-5. **Download the dataset**:
+6. **Download the dataset**:
    Download the dataset from the following link: [Dataset](https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX?usp=drive_link).
 
    After downloading, move the `data` folder to the root of the project directory.
