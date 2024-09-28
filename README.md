@@ -27,7 +27,7 @@ The **Crosswalk Traffic Light Detection Algorithm** is designed to aid visually 
 2. **Squeeze-and-Excitation (SE) Module**:
    - Added after the SPPF block of YOLOv5 model for detecting traffic lights.
    - Enhances the detection of small targets by reweighting feature channels based on their importance.
-   <img src="https://cdn.luogu.com.cn/upload/image_hosting/swj2z6ot.png" alt="Crosswalk Detection" width="300" />
+   <img src="https://cdn.luogu.com.cn/upload/image_hosting/t5yxjhmg.png" alt="Crosswalk Detection" width="300" />
 
 3. **Convolutional Block Attention Module (CBAM)**:
    - Integrated before each C3 block in the neck and after the SPPF block in the backbone of YOLOv5 model for crosswalk detection.
