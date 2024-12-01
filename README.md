@@ -108,7 +108,7 @@ You will need to have the following tools installed on your system:
 
 ### Dataset Setup
 
-The dataset contains images of crosswalk traffic lights used for training and testing. Ensure the dataset is placed under the `data` directory in the project folder.
+The dataset contains images of crosswalk traffic lights used for training and testing. You can view our training and testing data on [https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX](https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX).
 
 ---
 
@@ -125,10 +125,8 @@ In `main.py` there are five parameters that could be modified:
 - `image_dir`: Directory containing the images to be processed for detection.
 - `cnn_weights`: Path to the CNN model weights used for additional classifications.
 
-## Dataset link
-
-You can view our training and testing data on [https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX](https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX).
 The detection results are stored in `runs`.
+
 ## References
 
 1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2017). ImageNet classification with deep convolutional neural networks. *Communications of the ACM*, 60(6), 84-90.
