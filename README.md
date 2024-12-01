@@ -106,17 +106,6 @@ You will need to have the following tools installed on your system:
    cp ./yolo modification/yolo.py ~/.cache/torch/hub/ultralytics_yolov5_master/yolo.py
    ```
 
-6. **Download the dataset**:
-   Download the dataset from the following link: [Dataset](https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX?usp=drive_link).
-
-   After downloading, move the `data` folder to the root of the project directory.
-
-   Example:
-
-    ```bash
-   mv /path_to_downloaded_data/* ./data
-    ```
-
 ### Dataset Setup
 
 The dataset contains images of crosswalk traffic lights used for training and testing. Ensure the dataset is placed under the `data` directory in the project folder.
@@ -136,6 +125,9 @@ In `main.py` there are five parameters that could be modified:
 - `image_dir`: Directory containing the images to be processed for detection.
 - `cnn_weights`: Path to the CNN model weights used for additional classifications.
 
+## Dataset link
+
+You can view our training and testing data on [https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX](https://drive.google.com/drive/folders/1E3qQOaw82gZIkMg-UFsIMB_4cs0jCLDX).
 The detection results are stored in `runs`.
 ## References
 
