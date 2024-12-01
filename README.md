@@ -11,6 +11,7 @@ This repository contains a novel algorithm for detecting crosswalk traffic light
 - [Dataset Setup](#dataset-setup)
 - [How to Run](#how-to-run)
 - [References](#references)
+- [Android Client](#android-client)
 
 ---
 
@@ -127,6 +128,20 @@ In `main.py` there are five parameters that could be modified:
 
 The detection results are stored in `runs`.
 
+## Android Client
+
+To make the detection system more accessible to visually impaired pedestrians, we have designed a simple Android client that communicates with the detection algorithm running on a server. This Android application can be installed via Android Studio and provides a real-time interface to detect crosswalk traffic lights using the model.
+
+### Key Features
+- **Real-Time Detection**: The Android client sends images or video frames to the server for crosswalk and traffic light detection and receives the results in real-time.
+- **Pedestrian Alerts**: Based on the detected traffic signal, the client will notify the pedestrian whether it's safe to cross the street using text or audio alerts.
+- **Simple User Interface**: The Android app features an easy-to-use interface that allows users to capture images or stream video and get real-time feedback about crosswalk traffic lights.
+
+### How it Works
+1. **Server Communication**: The Android app communicates with the server where the Crosswalk Traffic Light Detection algorithm is deployed. It sends images of the current environment, which the server processes using the YOLOv5 and CNN models for traffic light detection.
+2. **Detection Process**: Once the server processes the image, it sends the results back to the Android app, indicating whether a traffic light is detected, its color (red or green), and the associated crosswalk.
+3. **User Alerts**: The app provides auditory feedback for visually impaired users, informing them whether it is safe to cross, based on the traffic light's status.
+4. 
 ## References
 
 1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2017). ImageNet classification with deep convolutional neural networks. *Communications of the ACM*, 60(6), 84-90.
