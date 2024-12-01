@@ -16,7 +16,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
-dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=transform)  # 替换为你的数据集路径
+dataset = ImageFolder(root='./data/cropped traffic lights', transform=transform)
 loader = DataLoader(dataset, batch_size=32, shuffle=False)
 def test_brightness_factor(factor):
     brightness_transform = transforms.Compose([
@@ -25,7 +25,7 @@ def test_brightness_factor(factor):
         transforms.ToTensor(),
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
-    brightness_dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=brightness_transform)
+    brightness_dataset = ImageFolder(root='./data/cropped traffic lights', transform=brightness_transform)
     brightness_loader = DataLoader(brightness_dataset, batch_size=32, shuffle=False)
     return evaluate_model(brightness_loader)
 def test_contrast_factor(factor):
@@ -35,7 +35,7 @@ def test_contrast_factor(factor):
         transforms.ToTensor(),
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
-    contrast_dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=contrast_transform)
+    contrast_dataset = ImageFolder(root='./data/cropped traffic lights', transform=contrast_transform)
     contrast_loader = DataLoader(contrast_dataset, batch_size=32, shuffle=False)
     return evaluate_model(contrast_loader)
 def add_noise(image, noise_factor=0.2):
@@ -51,7 +51,7 @@ def test_noise_factor(factor):
         transforms.ToTensor(),
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
-    noise_dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=noise_transform)
+    noise_dataset = ImageFolder(root='./data/cropped traffic lights', transform=noise_transform)
     noise_loader = DataLoader(noise_dataset, batch_size=32, shuffle=False)
     return evaluate_model(noise_loader)
 def evaluate_model(loader):
@@ -63,6 +63,7 @@ def evaluate_model(loader):
             labels = labels.to(device)
             outputs = model(images)
             _, predicted = torch.max(outputs.data, 1)
+            predicted = 1 - predicted
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
     accuracy = 100 * correct / total
@@ -87,6 +88,3 @@ print("\nTesting Noise:")
 for factor in noise_factors:
     print(f"Noise Factor: {factor}")
     test_noise_factor(factor)
-
-
-
