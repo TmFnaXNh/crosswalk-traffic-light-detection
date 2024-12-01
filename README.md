@@ -141,7 +141,6 @@ To make the detection system more accessible to visually impaired pedestrians, w
 1. **Server Communication**: The Android app communicates with the server where the Crosswalk Traffic Light Detection algorithm is deployed. It sends images of the current environment, which the server processes using the YOLOv5 and CNN models for traffic light detection.
 2. **Detection Process**: Once the server processes the image, it sends the results back to the Android app, indicating whether a traffic light is detected, its color (red or green), and the associated crosswalk.
 3. **User Alerts**: The app provides auditory feedback for visually impaired users, informing them whether it is safe to cross, based on the traffic light's status.
-4. 
 ## References
 
 1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2017). ImageNet classification with deep convolutional neural networks. *Communications of the ACM*, 60(6), 84-90.
