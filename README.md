@@ -102,8 +102,8 @@ You will need to have the following tools installed on your system:
    Copy the `common.py` and `yolo.py` files from this repository to the YOLOv5 folder in the `.cache` directory:
 
    ```bash
-   cp ./common.py ~/.cache/torch/hub/ultralytics_yolov5_master/models/common.py
-   cp ./yolo.py ~/.cache/torch/hub/ultralytics_yolov5_master/yolo.py
+   cp ./yolo modification/common.py ~/.cache/torch/hub/ultralytics_yolov5_master/models/common.py
+   cp ./yolo modification/yolo.py ~/.cache/torch/hub/ultralytics_yolov5_master/yolo.py
    ```
 
 6. **Download the dataset**:
@@ -125,22 +125,18 @@ The dataset contains images of crosswalk traffic lights used for training and te
 
 ## How to Run
 
-You can run the `main.py` script with the following required arguments:
+You can run the `main.py` to detect crosswalk traffic lights directly:
 
 ```bash
-python main.py --crosswalk_weights path_to_crosswalk_yolov5_weights \
-               --signal_weights path_to_signal_yolov5_weights \
-               --image_dir path_to_image_directory \
-               --label_dir path_to_label_directory \
-               --cnn_weights path_to_cnn_weights
+python main.py
 ```
+In `main.py` there are five parameters that could be modified:
+- `crosswalk_weights`: Path to the YOLOv5 weights for crosswalk detection.
+- `signal_weights`: Path to the YOLOv5 weights for traffic signal detection.
+- `image_dir`: Directory containing the images to be processed for detection.
+- `cnn_weights`: Path to the CNN model weights used for additional classifications.
 
-- `--crosswalk_weights`: Path to the YOLOv5 weights for crosswalk detection.
-- `--signal_weights`: Path to the YOLOv5 weights for traffic signal detection.
-- `--image_dir`: Directory containing the images to be processed for detection.
-- `--label_dir`: Directory of the labels (in `.txt` format, containing 0/1 labels) to check the detection validity.
-- `--cnn_weights`: Path to the CNN model weights used for additional classifications.
-
+The detection results are stored in `runs`.
 ## References
 
 1. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2017). ImageNet classification with deep convolutional neural networks. *Communications of the ACM*, 60(6), 84-90.
