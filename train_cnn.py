@@ -11,9 +11,9 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)) 
 ])
-train_dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=transform)
+train_dataset = ImageFolder(root='./data/cropped traffic lights', transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-val_dataset = ImageFolder(root='./data/images(cropped traffic lights)', transform=transform)
+val_dataset = ImageFolder(root='./data/cropped traffic lights', transform=transform)
 val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 model = TrafficLightCNN()
 criterion = nn.CrossEntropyLoss()
@@ -31,11 +31,8 @@ for epoch in range(n_epochs):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
         running_loss += loss.item()
-
     print(f"Epoch [{epoch+1}/{n_epochs}], Loss: {running_loss/len(train_loader):.4f}")
-
     model.eval()
     correct = 0
     total = 0
@@ -46,9 +43,6 @@ for epoch in range(n_epochs):
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
-
     val_accuracy = 100 * correct / total
     print(f'Accuracy: {val_accuracy:.2f}%')
-
-    # Save the trained model
     torch.save(model.state_dict(), f'traffic_light_cnn{epoch}.pth')
