@@ -134,7 +134,7 @@ To make the detection system more accessible to visually impaired pedestrians, w
 
 ### Key Features
 - **Real-Time Detection**: The Android client sends images or video frames to the server for crosswalk and traffic light detection and receives the results in real-time.
-- **Pedestrian Alerts**: Based on the detected traffic signal, the client will notify the pedestrian whether it's safe to cross the street using text or audio alerts.
+- **Pedestrian Alerts**: Based on the detected traffic signal, the client will notify the pedestrian whether it's safe to cross the street using text and audio alerts.
 - **Simple User Interface**: The Android app features an easy-to-use interface that allows users to capture images or stream video and get real-time feedback about crosswalk traffic lights.
 
 ### How it Works
